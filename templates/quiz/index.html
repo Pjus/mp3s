@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <table>
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>분류</th>
+            {% if cert == False %}
+                <th>응시하기</th>
+            {% else %}
+                <th>수료증 출력</th>
+            {% endif %}
+            <th>점수</th>
+            <th>수료</th>
+
+
+
+        </tr>
+
+        <tr>
+            {% if quiz_list %}
+                {% for content in quiz_list %}
+                    <td>1</td>
+                    <td><a href="/quiz/detail/{{ content.id }}">1</a></td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                {% endfor %}
+            {% endif %}
+
+
+        </tr>
+
+
+    </table>
+</body>
+</html>
